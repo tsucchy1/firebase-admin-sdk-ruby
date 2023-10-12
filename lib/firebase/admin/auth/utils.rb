@@ -54,6 +54,13 @@ module Firebase
           !!val unless val.nil?
         end
 
+        def validate_custom_claims(custom_claims, required: false)
+          return nil if custom_claims.nil? && !required
+
+          raise ArgumentError, "custom_claims must be a hash" unless custom_claims.is_a?(Hash)
+          custom_claims
+        end
+
         module_function
 
         def validate_url(url)

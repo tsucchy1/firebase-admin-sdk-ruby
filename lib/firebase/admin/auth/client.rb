@@ -101,6 +101,10 @@ module Firebase
           verified_claims unless revoked
         end
 
+        def set_custom_user_claims(uid, custom_claims)
+          @user_manager.update_user(uid: uid, custom_claims: custom_claims)
+        end
+
         private
 
         # Checks if an ID token has been revoked.
