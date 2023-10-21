@@ -11,6 +11,7 @@ module Firebase
       https://www.googleapis.com/auth/firebase
       https://www.googleapis.com/auth/identitytoolkit
       https://www.googleapis.com/auth/userinfo.email
+      https://www.googleapis.com/auth/firebase.messaging
     ]
 
     # Firebase credentials.
